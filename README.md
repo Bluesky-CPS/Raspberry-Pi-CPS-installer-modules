@@ -1,6 +1,6 @@
 # Raspberry-Pi-CPS-installer-modules
 ====================================
-The Raspberry-Pi-CPS-installer-modules operate on the standard raspbian and connecting the [Blue-sky Logger cloud executable files Ver1.0](https://github.com/Bluesky-CPS/BlueSkyLoggerCloudBINResearchVer1.0). The modules are created and Compile with the Java embedded (jdk1.8.0_25).
+The Raspberry-Pi-CPS-installer-modules operate on the standard raspbian and connecting the [Blue-sky cloud](https://github.com/Bluesky-CPS/BlueSkyLoggerCloudBINResearchVer1.0). You can easily install the system on the pi first and install the [Blue-sky cloud](https://github.com/Bluesky-CPS/BlueSkyLoggerCloudBINResearchVer1.0) in order to running the system on.  
 
 
 # How to install
