@@ -2,10 +2,8 @@
 ====================================
 The Raspberry-Pi-CPS-installer-modules operate with [Blue-sky Logger cloud executable files Ver1.0](https://github.com/Bluesky-CPS/BlueSkyLoggerCloudBINResearchVer1.0). The modules are located at the Raspberry-Pi (Devices) side.
 
-
 # How to install
 ----------------
-
 Go to your Raspberry-Pi terminal first.
 
 - **Step1:** The module need the Java version 1.7 at least. Let see [Java site](http://www.oracle.com/technetwork/java/embedded/embedded-se/overview/index.html) and install the Java first.
