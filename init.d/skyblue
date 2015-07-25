@@ -1,0 +1,60 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          bluesky
+# Required-Start:    $local_fs 
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: skyblue with RaspberryPI(s) connector module.
+### END INIT INFO
+
+case "$1" in
+start)
+	echo "INFO: Checking network connection ..."
+	##WIFI_CONN_STATUS=`wpa_cli status | grep wpa_state | cut -d"=" -f2`
+	##echo "INFO: The wifi connection status is $WIFI_CONN_STATUS"
+
+#	if [ "$WIFI_CONN_STATUS" = 'COMPLETED' ]; then
+#		echo "ok"
+#	else
+#		echo "ng"
+#	fi;
+	NUM=0
+#	while [ "$WIFI_CONN_STATUS" != 'COMPLETED' ]
+	while [ "$ETH_CONN_STATUS" != 'eth0' -a $NUM -lt 10 ]
+	do
+		NUM=$(($NUM + 1))
+		echo "INFO: $NUM times::Trying to check ethernet network connection ..."
+		sleep 3
+#		WIFI_CONN_STATUS=`wpa_cli status | grep wpa_state | cut -d"=" -f2`
+		ETH_CONN_STATUS=`ifconfig | grep eth | cut -d" " -f1`
+	done
+        currPath=${PWD}
+        cd /skyblue/LCP-connector
+#        ./enableSkyblue.sh
+#	su -c "nohup ./run.sh >> /dev/null 2>&1 &"
+	./run.sh &
+        cd $currPath
+        echo "INFO: skyblue LCP-connector started." >&2
+    ;;
+stop)
+	BLUESKY_PID=`ps ax | grep SkyBlueConnectToLCP | awk '{print $1}'`
+#	echo $BLUESKY_PID
+	arr=`echo $BLUESKY_PID`
+#	echo $arr
+	for i in $arr ; do
+#		echo $i
+		su -c "kill $i &> /dev/null"
+	done
+	echo "INFO: skyblue LCP-connector stopped." >&2
+    ;;
+
+restart)
+    $0 stop
+    $0 start
+    ;;
+*)
+    echo "usage: $0 (start|stop|restart)"
+;;
+esac
+
