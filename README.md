@@ -5,6 +5,8 @@
 
 # How to install
 ================
+Go to your Raspberry-Pi terminal first.
+
 ・ Step1: The module need the Java version 1.7 at least. Let see [Java site](http://www.oracle.com/technetwork/java/embedded/embedded-se/overview/index.html) and install the Java first.
 
 ・ Step2: Let install the CPS modules. Run the following script.
