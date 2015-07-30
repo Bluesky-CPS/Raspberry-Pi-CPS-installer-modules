@@ -4,9 +4,9 @@ The Raspberry-Pi-CPS-installer-modules operate on the standard raspbian and conn
 
 How to install
 ----------------
-It has only simple 3 steps. Here let go to your Raspberry-Pi terminal first.
+It has only simple 3 steps.
 
-- **Step1:** Prepare your Pi sdcard from the [Raspberry-Pi site](https://www.raspberrypi.org/downloads/). Because, the module need the Java version 1.8.0.25 at least, so you need to check that your Pi has available or not. If your Pi has not available Java, please see the installation details from Java embedded version [here](http://www.oracle.com/technetwork/java/embedded/embedded-se/overview/index.html) in order to install the Java first.
+- **Step1:** Prepare your Pi's sdcard from the [Raspberry-Pi site](https://www.raspberrypi.org/downloads/). Because, the modules have to running under the Java version 1.8.0.25 at least, so you have to check that your Pi has available or not. If your Pi has not available Java, please see the installation details from Java embedded version [here](http://www.oracle.com/technetwork/java/embedded/embedded-se/overview/index.html) in order to install the Java first.
 
 - **Step2:** Let install the CPS modules. Run the following script.
 
