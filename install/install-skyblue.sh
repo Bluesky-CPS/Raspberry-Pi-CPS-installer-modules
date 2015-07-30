@@ -27,7 +27,9 @@ sudo update-rc.d -f skyblue defaults 55
 sudo update-rc.d -f skyblue-module defaults 2
 
 echo "Copy skyblue executing file ..."
-sudo cp -rf $curr/../../skyblue /.
+#sudo cp -rf $curr/../../skyblue /.
+sudo cp -rf $curr/../../Raspberry-Pi-CPS-installer-modules /.
+sudo mv /Raspberry-Pi-CPS-installer-modules /skyblue
 sudo cp -rf $curr/../skyblue-edaccesstoken-config /usr/bin/.
 cd /skyblue/install
 sudo rm -rf pi-blaster
