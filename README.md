@@ -14,7 +14,7 @@ It has only simple 3 steps. Here let go to your Raspberry-Pi terminal first.
 ```shell
 wget -O - http://www.bluesky-cps.org/raspberrypi-cps-modules-installer.sh | sh
 ```
-The script will clone the both installer modules from here and pi-blaster from [https://github.com/sarfata/pi-blaster](https://github.com/sarfata/pi-blaster). Then the script will install Raspberry-Pi-CPS first, and that make the pi-blaster with their installing operation.
+The script will clones the both installer-modules from here and pi-blaster from [https://github.com/sarfata/pi-blaster](https://github.com/sarfata/pi-blaster). The script will installs the modules of Raspberry-Pi-CPS first, and then makes the pi-blaster with their installing operation.
 
 - **Step3:** You need to reboot your pi only one time first when the installer has finished the operation.
 
